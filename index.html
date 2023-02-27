@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Технопарк 2023 АК</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- <button class="BTN" id="myBtn"><img class="modal-wid" src="img/modal-icon.webp" alt=""></button> -->
+    <div id="myModal" class="modal1">
+        <div class="modal-content1">
+            <span class="close">&times;</span>
+            <form method="POST" autocomplete="off" action="">
+                <div class="technical-support">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" placeholder="Enter your email" type="email">
+                    <label for="password">Password</label>
+                    <input id="tel" name="tel" placeholder="Enter your phone number" type="tel">
+                    <button class="button1">Submit</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <header>
+        <div class="container header-top">
+            <div class="row">
+                <div class="col-2">
+                    <img src="img/IMAGE (8).png" alt="">
+
+                </div>
+                <div class="col-7">
+                    <div class="wraper">
+                        <select name="" id="">
+                            <option value="">
+                                <p>Product</p>
+                            </option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">
+                                <p>Developers</p>
+                            </option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                        <ul>
+                            <li><a href="">Beta</a></li>
+                            <li><a href="">Pricing</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <div class="col">
+                    <a href=""><button>Start your project</button></a>
+                    <!-- <a class="sign" href="pages/sign.html">Sign in</a> -->
+                    <a class="sign" onclick="document.getElementById('id01').style.display='block'"
+                        style="width:auto;">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Full-width input fields */
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        .sign-btn {
+            background-color: #24B47E;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .sign-btn:hover {
+            background-color: #00ffa2;
+            opacity: 0.8;
+        }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        /* Center the image and position the close button */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+
+        }
+
+        /* Add Zoom Animation */
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="img/musical icon.jfif" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container ">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button class="sign-btn" type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Cancel
+                </button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+
+
+    <section class="main-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p><span>Photographer & Filmmaker</span> </p>
+                    <h6 class="Headerh1">Aperture Studios</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                        elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo
+                        diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut
+                        sem vitae risus tristique posuere.
+                    </p>
+                    <img src="img/ISO 1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="what-section">
+        <div class="container">
+            <div class="row">
+                <div class="text">
+                    <h6 class="Headerh1">What we do</h6>
+                    <p>The areas that we're specialized in.</p>
+                </div>
+
+                <div class="col what-text what">
+                    <h6 class="Headerh6">
+                        Product Photography
+                    </h6>
+                    <p>Cras commodo consequat orci, in convallis risus egestas non. Nulla efficitur auctor
+                        hendrerit. Etiam ut orci varius, faucibus libero ac, cursus quam.</p>
+                    <div class="btn">
+                        <a href=""><button><img src="img/Frame.png" alt=""> Read more</button></a>
+                    </div>
+
+                </div>
+
+                <div class="col what-text what2">
+                    <h6 class="Headerh6">
+                        Architecture Photography
+                    </h6>
+                    <p>Aenean porta neque eget consequat fringilla. Vestibulum ultrices, orci nec egestas pharetra,
+                        ligula est semper enim, nec auctor sapien leo nec purus. Fusce tincidunt aliquet sapien, sit
+                        amet rhoncus leo imperdiet nec.</p>
+                    <div class="btn">
+                        <a href=""><button><img src="img/Frame.png" alt=""> Read more</button></a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col what-text what3">
+                    <h6 class="Headerh6">
+                        Drone Photography
+                    </h6>
+                    <p>Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt. Duis tristique sed lorem a
+                        vestibulum. Cras commodo consequat orci, in convallis risus egestas non. Nulla efficitur auctor
+                        hendrerit. Etiam ut orci varius, faucibus libero ac, cursus quam.</p>
+                    <div class="btn">
+                        <a href=""><button><img src="img/Frame.png" alt=""> Read more</button></a>
+                    </div>
+                </div>
+
+                <div class="col what-text what4">
+                    <h6 class="Headerh6">
+                        Wildlife Photography
+                    </h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et
+                        faucibus. Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex, condimentum dapibus
+                        congue et, vulputate ut ligula. Vestibulum sit amet urna turpis.</p>
+                    <div class="btn">
+                        <a href=""><button><img src="img/Frame.png" alt=""> Read more</button></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="mountain-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h6 class="Headerh6">Sunset at Mount Fuji</h6>
+                    <p>Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis risus egestas
+                        non.
+                    </p>
+                    <img src="img/ISO2.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="inf">
+        <section class="tools-section">
+
+
+            <div class="left-tool">
+                <p class="gear"><span>The Gear cage</span> </p>
+                <p class="tool-p">The tools that we use.</p>
+                <p class="info-p">The say that "no place is boring if you've had a good night's sleep and have a pocket
+                    full of unexposed film". While we don't shoot (a lot) of film these days — these are the tools that
+                    we actually use everyday to capture the amazing things around us.
+
+                </p>
+                <div class="btn">
+                    <a href=""><button><img src="img/Frame.png" alt=""> Check it out</button></a>
+                </div>
+
+
+            </div>
+
+        </section>
+        <section class="tool-sec-2">
+            <div class="wrapper">
+                <div class=" right">
+                    <img class="stay" src="img/ISO3.png" alt="">
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <section class="leaves-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h6 class="Headerh6">Monstera Leafs</h6>
+                    <p>
+                        Vestibulum sit amet urna turpis. Mauris euismod elit et nisi ultrices, ut faucibus orci
+                        tincidunt.
+                    </p>
+                    <img src="img/ISO4.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-clients">
+        <div class="container">
+            <div class="row">
+                <h1 class="Headerh1">Past clients</h1>
+                <p>Trusted by your favourite companies</p>
+
+            </div>
+            <div>
+                <img src="img/past clients 1.png" alt="">
+                <img src="img/past clients 2.png" alt="">
+                <img src="img/past clients 3.png" alt="">
+                <img src="img/past clients 4.png" alt="">
+                <img src="img/past clients 5.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="star-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h6 class="Headerh6">Star fall in the Himalayas</h6>
+                    <p>
+                        Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex, condimentum dapibus congue et,
+                        vulputate ut ligula.
+                    </p>
+                    <img src="img/Frame (3).png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="help-section">
+        <div class="container">
+            <div class="row">
+                <h6 class="Headerh1">Need help with photography</h6>
+                <h6 class="Headerh1"> or videography?</h6>
+                <p>We're here for you!</p>
+                <div class="btn">
+                    <a href=""><button><img src="img/Frame.png" alt=""> Get in touch</button></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="footertop-section">
+        <div class="container">
+            <div class="row">
+                <div class="col ftr">
+                    <div>
+                        <img src="img/IMAGE (8).png" alt="">
+                        <p>Photographers & videographers capturing the world around us.</p>
+                    </div>
+                    <div>
+                        <p><span>Business areas</span></p>
+                        <p>Product Photography</p>
+                        <p>Architecture Photography</p>
+                        <p>Drone Photography</p>
+                        <p>Wildlife Photography</p>
+
+                    </div>
+                    <div>
+                        <p><span>Pages</span></p>
+                        <p>Gear cage</p>
+                        <p>Featured images</p>
+                        <p>Contact</p>
+                        <p>Style guide</p>
+                        <p>Instructions</p>
+                        <p>Changelog</p>
+                    </div>
+
+                </div>
+                <hr class="hr1">
+            </div>
+        </div>
+    </section>
+    <section class="footerbottom-section">
+        <div class="container">
+            <div class="row">
+                <div class="col ftr">
+                    <div>
+                        <h6>Subscribe to our newsletter</h6>
+                        <p>Read about all the things we do.</p>
+                    </div>
+
+                    <div class="btn">
+                        <a href=""><button><img src="img/Rectangle (1).png" alt=""></button></a>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col ftr">
+                    <p>© Aperture Photography, Inc. All rights reserved. Licensing</p>
+                    <div>
+                        <a href="https://twitter.com/login"><img src="img/twitter.png" alt=""></a>
+                        <a href="https://www.instagram.com/?hl=en"><img src="img/instagram.png" alt=""></a>
+                        <a href="https://www.facebook.com/index.php"><img src="img/facebook.png" alt=""></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- <script>
+
+        let obj = {}
+
+        let email = 'a.korbush05@.gmail.com'
+        let tel = '+375292953276'
+
+        obj[email] = tel
+
+        let myjson = JSON.stringify(obj)
+        alert(myjson)
+    </script> -->
+
+
+
+    <script src="app/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
+    <script src="https://kit.fontawesome.com/463a7f57c7.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
